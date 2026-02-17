@@ -2,6 +2,7 @@ package org.example1;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
+        createThread();
         createThreadMisbehave();
     }
 
@@ -21,7 +22,7 @@ public class Main {
         Thread.sleep(1000);
     }
 
-    private static void createThreadMisbehave() throws InterruptedException {
+    private static void createThreadMisbehave() {
         Thread thread = new Thread(() -> {
             throw new RuntimeException("Intentional Exception");
         });
@@ -29,13 +30,8 @@ public class Main {
         thread.setName("Misbehaving Thread");
         thread.setPriority(Thread.MAX_PRIORITY);
 
-        thread.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
-            @Override
-            public void uncaughtException(Thread t, Throwable e) {
-                System.out.println("A critical error happened in thread " + t.getName() + " the error is " +
-                        e.getMessage());
-            }
-        });
+        thread.setUncaughtExceptionHandler((t, e) ->
+                System.out.println("A critical error happened in thread " + t.getName() + " the error is " + e.getMessage()));
 
         thread.start();
     }
