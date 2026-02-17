@@ -1,4 +1,4 @@
-package org.example2.threads;
+package org.create.example2.threads;
 
 public class ExtendedThread extends Thread {
 

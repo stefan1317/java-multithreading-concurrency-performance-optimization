@@ -1,4 +1,4 @@
-package org.example3.domain;
+package org.create.example3.domain;
 
 import java.util.Random;
 

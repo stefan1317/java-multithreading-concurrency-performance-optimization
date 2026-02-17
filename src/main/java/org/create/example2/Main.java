@@ -1,7 +1,7 @@
-package org.example2;
+package org.create.example2;
 
-import org.example2.threads.ExtendedThread;
-import org.example2.threads.RunnableThread;
+import org.create.example2.threads.ExtendedThread;
+import org.create.example2.threads.RunnableThread;
 
 public class Main {
     public static void main(String[] args) {

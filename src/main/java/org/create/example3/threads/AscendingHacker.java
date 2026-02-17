@@ -1,15 +1,16 @@
-package org.example3.threads;
+package org.create.example3.threads;
 
-import org.example3.domain.Vault;
+import org.create.example3.domain.Vault;
 
-public class DescendingHacker extends Hacker {
+public class AscendingHacker extends Hacker{
 
-    public DescendingHacker(Vault vault) {
+    public AscendingHacker(Vault vault) {
         super(vault);
     }
 
+    @Override
     public void run() {
-        for (int i = 1000; i >= 0; i--) {
+        for (int i = 0; i < 1000; i++) {
 
             try {
                 sleep(10);
@@ -18,7 +19,7 @@ public class DescendingHacker extends Hacker {
             }
 
             if (this.vault.crackPassword(i)) {
-                System.out.println("Descending Hacker found the password!");
+                System.out.println("Ascending Hacker found the password!");
                 System.exit(0);
             }
         }

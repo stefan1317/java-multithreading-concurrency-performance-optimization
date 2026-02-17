@@ -1,6 +1,6 @@
-package org.example3.threads;
+package org.create.example3.threads;
 
-import org.example3.domain.Vault;
+import org.create.example3.domain.Vault;
 
 public abstract class Hacker extends Thread {
     public Vault vault;

@@ -1,4 +1,4 @@
-package org.example3.threads;
+package org.create.example3.threads;
 
 public class Police extends Thread{
     private final Thread[] threads;

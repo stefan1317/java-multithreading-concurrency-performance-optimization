@@ -1,4 +1,4 @@
-package org.example1;
+package org.create.example1;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
